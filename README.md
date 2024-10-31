@@ -34,7 +34,34 @@
 
 ---
 ## 시스템 설계도
-![아키텍처](https://github.com/user-attachments/assets/a382d2ec-11ab-4e2d-b6de-5f8b2f1453ed)
+
+<p align="center"><img src="https://github.com/user-attachments/assets/a382d2ec-11ab-4e2d-b6de-5f8b2f1453ed" width="50%" height="50%"></p>
+
+## 트리 구조
+
+```plaintext
+.
+└── order_it
+    ├── global                          # 전역 설정 및 예외 처리
+    │   ├── BaseTimeEntity.java
+    │   ├── CorsMvcConfig.java
+    │   ├── GlobalExceptionHandler.java
+    │   ├── SecurityConfig.java
+    │   └── SwaggerConfig.java
+    ├── item                            # 아이템 관리 모듈
+    │   ├── controller
+    │   ├── dto
+    │   ├── entity
+    │   ├── repository
+    │   └── service
+    └── order                           # 주문 및 영수증 관리 모듈
+        ├── controller
+        ├── dto
+        ├── entity
+        ├── printer                     # 영수증 프린터 모듈
+        ├── repository
+        └── service
+```
 
 ## 백엔드 기술 스택
 
